@@ -36,7 +36,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         cell.answerCount.text = "\(questionForRow?.answerCount ?? 0)"
         cell.viewsCount.text = "\(questionForRow?.viewCount ?? 0) views"
         cell.score.text = "\(questionForRow?.score ?? 0)"
-        cell.displayName.text = questionForRow?.owner?.displayName
+        cell.displayName.text = questionForRow?.owner.displayName
         
         //set the array of tag buttons
         for (n, button) in cell.collectionOfTagButtons.enumerated() {
