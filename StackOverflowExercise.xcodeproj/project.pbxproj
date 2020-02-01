@@ -17,6 +17,7 @@
 		37141E8123E481CB00CFD7F6 /* StackOverflowExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E8023E481CB00CFD7F6 /* StackOverflowExerciseUITests.swift */; };
 		37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */; };
 		37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */; };
+		37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		37141E8223E481CC00CFD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowResponseModel.swift; sourceTree = "<group>"; };
+		37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		37141E5D23E481B300CFD7F6 /* StackOverflowExercise */ = {
 			isa = PBXGroup;
 			children = (
+				37141E9223E4FE0000CFD7F6 /* Models */,
 				37141E5E23E481B300CFD7F6 /* AppDelegate.swift */,
 				37141E6023E481B300CFD7F6 /* SceneDelegate.swift */,
 				37141E6223E481B300CFD7F6 /* ViewController.swift */,
@@ -132,6 +135,14 @@
 				37141E8223E481CC00CFD7F6 /* Info.plist */,
 			);
 			path = StackOverflowExerciseUITests;
+			sourceTree = "<group>";
+		};
+		37141E9223E4FE0000CFD7F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37141E6323E481B300CFD7F6 /* ViewController.swift in Sources */,
+				37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */,
 				37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */,
 				37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */,
 				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,

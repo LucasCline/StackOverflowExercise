@@ -9,21 +9,29 @@
 import Foundation
 
 class NetworkingManager {
-    
-    func fetchQuestions() {
-        //Get rid of the force unwrap
-        //Make url string configurable or make a new method that is
-        let url = URL(string: "https://api.stackexchange.com/questions?order=desc&sort=activity&site=stackoverflow")!
+    func fetchQuestions(queryParameters: String? = nil) {
+        //if no query params are provided, we default with the questions from stackoverflow in ascending order based on activity (most recent questions first)
+        let queryParams = queryParameters ?? "order=desc&sort=activity&site=stackoverflow"
+        guard let url = URL(string: "https://api.stackexchange.com/questions?\(queryParams)") else {
+            print("Unable to create URL in fetchQuestions method with query parameters - \(queryParams)")
+            return
+        }
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            //Add this logic to an extension for readability -- not the whole guard, just the successful response bit
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                    print("Fetch Questions request was unsuccessful with response - \(String(describing: response))")
+            guard let response = response else {
+                print("No response from server for fetchQuestions method")
                 return
             }
             
-            guard let data = data else { return }
+            guard response.isSuccessful else {
+                print("Fetch Questions request was unsuccessful with response - \(response)")
+                return
+            }
+
+            guard let data = data else {
+                return
+            }
+
             do {
                 let stackOverflowResponse = try JSONDecoder().decode(StackOverflowResponseModel.self, from: data)
                 print(stackOverflowResponse)
