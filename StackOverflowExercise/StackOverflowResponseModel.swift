@@ -23,7 +23,7 @@ struct StackOverflowResponseModel: Codable {
 
 struct StackOverflowQuestionModel: Codable {
     var tags: [String]
-    var owner: StackOverflowOwnerModel
+    var owner: StackOverflowOwnerModel?
     var isAnswered: Bool
     var viewCount: Int
     var answerCount: Int
@@ -49,13 +49,13 @@ struct StackOverflowQuestionModel: Codable {
 }
 
 struct StackOverflowOwnerModel: Codable {
-    var reputation: Int
-    var userId: Int
+    var reputation: Int?
+    var userId: Int?
     var userType: String
     var acceptRate: Int?
-    var profileImage: String
-    var displayName: String
-    var link: String
+    var profileImage: String?
+    var displayName: String?
+    var link: String?
     enum CodingKeys: String, CodingKey {
         case reputation
         case userId = "user_id"
