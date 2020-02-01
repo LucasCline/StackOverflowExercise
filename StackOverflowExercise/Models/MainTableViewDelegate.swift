@@ -22,7 +22,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return networkingManager?.questions.count ?? 10 //arbitrary default of 10
+        return networkingManager?.getFilteredQuestions().count ?? 10 //arbitrary default of 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,7 +31,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
             return UITableViewCell()
         }
         
-        let questionForRow = networkingManager?.questions[indexPath.row]
+        let questionForRow = networkingManager?.getFilteredQuestions()[indexPath.row]
 
         cell.title.text = String(htmlEncodedString: questionForRow?.title ?? "Question")
         cell.answerCount.text = "\(questionForRow?.answerCount ?? 0)"
