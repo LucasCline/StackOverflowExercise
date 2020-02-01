@@ -32,12 +32,11 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         
         let questionForRow = networkingManager?.questions[indexPath.row]
 
-        cell.title.text = questionForRow?.title
+        cell.title.text = String(htmlEncodedString: questionForRow?.title ?? "Question")
         cell.answerCount.text = "\(questionForRow?.answerCount ?? 0)"
         cell.viewsCount.text = "\(questionForRow?.viewCount ?? 0) views"
         cell.score.text = "\(questionForRow?.score ?? 0)"
-        cell.displayName.text = questionForRow?.owner.displayName
-        
+        cell.displayName.text = String(htmlEncodedString: questionForRow?.owner.displayName ?? "N/A")
         //set the array of tag buttons
         for (n, button) in cell.collectionOfTagButtons.enumerated() {
             //this is to prevent an array out of index crash for now.
