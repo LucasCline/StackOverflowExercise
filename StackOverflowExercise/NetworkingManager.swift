@@ -9,7 +9,10 @@
 import Foundation
 
 class NetworkingManager {
-    func fetchQuestions(queryParameters: String? = nil) {
+    //make private??
+    var questions: [StackOverflowQuestionModel] = []
+    
+    func fetchQuestions(queryParameters: String? = nil, completionHandler: @escaping () -> ()) {
         //if no query params are provided, we default with the questions from stackoverflow in ascending order based on activity (most recent questions first)
         let queryParams = queryParameters ?? "order=desc&sort=activity&site=stackoverflow"
         guard let url = URL(string: "https://api.stackexchange.com/questions?\(queryParams)") else {
@@ -34,7 +37,8 @@ class NetworkingManager {
 
             do {
                 let stackOverflowResponse = try JSONDecoder().decode(StackOverflowResponseModel.self, from: data)
-                print(stackOverflowResponse)
+                self.questions = stackOverflowResponse.questions
+                completionHandler()
             } catch let decodingError {
                 print(decodingError)
             }

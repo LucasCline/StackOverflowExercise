@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E5E23E481B300CFD7F6 /* AppDelegate.swift */; };
 		37141E6123E481B300CFD7F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E6023E481B300CFD7F6 /* SceneDelegate.swift */; };
-		37141E6323E481B300CFD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E6223E481B300CFD7F6 /* ViewController.swift */; };
 		37141E6623E481B300CFD7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37141E6423E481B300CFD7F6 /* Main.storyboard */; };
 		37141E6823E481CB00CFD7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37141E6723E481CB00CFD7F6 /* Assets.xcassets */; };
 		37141E6B23E481CB00CFD7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37141E6923E481CB00CFD7F6 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */; };
 		37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */; };
 		37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */; };
+		37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */; };
+		37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 		37141E5B23E481B300CFD7F6 /* StackOverflowExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37141E5E23E481B300CFD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37141E6023E481B300CFD7F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37141E6223E481B300CFD7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37141E6523E481B300CFD7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37141E6723E481CB00CFD7F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37141E6A23E481CB00CFD7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowResponseModel.swift; sourceTree = "<group>"; };
 		37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+StackOverflowExercise.swift"; sourceTree = "<group>"; };
+		37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,10 @@
 		37141E5D23E481B300CFD7F6 /* StackOverflowExercise */ = {
 			isa = PBXGroup;
 			children = (
+				37141E9523E509ED00CFD7F6 /* Controllers */,
 				37141E9223E4FE0000CFD7F6 /* Models */,
 				37141E5E23E481B300CFD7F6 /* AppDelegate.swift */,
 				37141E6023E481B300CFD7F6 /* SceneDelegate.swift */,
-				37141E6223E481B300CFD7F6 /* ViewController.swift */,
 				37141E6423E481B300CFD7F6 /* Main.storyboard */,
 				37141E6723E481CB00CFD7F6 /* Assets.xcassets */,
 				37141E6923E481CB00CFD7F6 /* LaunchScreen.storyboard */,
@@ -140,9 +142,26 @@
 		37141E9223E4FE0000CFD7F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */,
+				37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */,
+				37141E9A23E50D7000CFD7F6 /* Extensions */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		37141E9523E509ED00CFD7F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		37141E9A23E50D7000CFD7F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,11 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37141E6323E481B300CFD7F6 /* ViewController.swift in Sources */,
 				37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */,
 				37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */,
 				37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */,
 				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,
+				37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */,
+				37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */,
 				37141E6123E481B300CFD7F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
