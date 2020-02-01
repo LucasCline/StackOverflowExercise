@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let navigationController = window?.rootViewController as? UINavigationController,
             let firstViewController = navigationController.topViewController as? MainTableViewController {
-                firstViewController.delegate = MainTableViewDelegate(viewController: firstViewController, networkingManager: NetworkingManager())
+                firstViewController.delegate = MainTableViewDelegate(viewController: firstViewController,
+                                                                     networkingManager: NetworkingManager(),
+                                                                     cache: NSCache())
         }
     }
 
