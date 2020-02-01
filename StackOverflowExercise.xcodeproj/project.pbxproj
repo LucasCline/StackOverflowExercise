@@ -15,6 +15,8 @@
 		37141E6B23E481CB00CFD7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37141E6923E481CB00CFD7F6 /* LaunchScreen.storyboard */; };
 		37141E7623E481CB00CFD7F6 /* StackOverflowExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E7523E481CB00CFD7F6 /* StackOverflowExerciseTests.swift */; };
 		37141E8123E481CB00CFD7F6 /* StackOverflowExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E8023E481CB00CFD7F6 /* StackOverflowExerciseUITests.swift */; };
+		37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */; };
+		37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		37141E7C23E481CB00CFD7F6 /* StackOverflowExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37141E8023E481CB00CFD7F6 /* StackOverflowExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowExerciseUITests.swift; sourceTree = "<group>"; };
 		37141E8223E481CC00CFD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				37141E6723E481CB00CFD7F6 /* Assets.xcassets */,
 				37141E6923E481CB00CFD7F6 /* LaunchScreen.storyboard */,
 				37141E6C23E481CB00CFD7F6 /* Info.plist */,
+				37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */,
+				37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */,
 			);
 			path = StackOverflowExercise;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37141E6323E481B300CFD7F6 /* ViewController.swift in Sources */,
+				37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */,
 				37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */,
+				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,
 				37141E6123E481B300CFD7F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
