@@ -19,6 +19,7 @@
 		37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */; };
 		37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */; };
 		37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */; };
+		37141E9C23E5DC1600CFD7F6 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 		37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDelegate.swift; sourceTree = "<group>"; };
+		37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */,
+				37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37141E9423E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift in Sources */,
+				37141E9C23E5DC1600CFD7F6 /* QuestionTableViewCell.swift in Sources */,
 				37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */,
 				37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */,
 				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,
