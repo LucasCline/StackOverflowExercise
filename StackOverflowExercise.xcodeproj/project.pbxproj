@@ -23,6 +23,7 @@
 		378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */; };
 		378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */; };
 		378E987123E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */; };
+		378E987423E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987323E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 		378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailWebViewController.swift; sourceTree = "<group>"; };
 		378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+StackOverflowExercise.swift"; sourceTree = "<group>"; };
+		378E987323E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */,
 				378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */,
 				378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */,
+				378E987323E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				378E987123E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift in Sources */,
 				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,
 				378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */,
+				378E987423E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift in Sources */,
 				37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */,
 				37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */,
 				378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */,

@@ -58,29 +58,12 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         }
         
         cell.profileImage.image = nil
-
         if let cachedImage = cache?.object(forKey: indexPath.row as AnyObject) as? UIImage {
             cell.profileImage.image = cachedImage
         } else {
-            var task: URLSessionDownloadTask?
-            if let imageURLString = questionForRow?.owner?.profileImage,
-                let imageURL = URL(string: imageURLString) {
-                let session = URLSession.shared
-                task = session.downloadTask(with: imageURL) { (url, response, error) in
-                    if let data = try? Data(contentsOf: imageURL) {
-                        DispatchQueue.main.async {
-                            if let cellToUpdate = tableView.cellForRow(at: indexPath) as? QuestionTableViewCell,
-                                let downloadedImage = UIImage(data: data) {
-                                cellToUpdate.profileImage.image = downloadedImage
-                                self.cache?.setObject(downloadedImage, forKey: indexPath.row as AnyObject)
-                            }
-                        }
-                    }
-                }
-            }
-            task?.resume()
+            cell.profileImage.loadFromURL(photoURL: questionForRow?.owner?.profileImage)
         }
-        
+
         return cell
     }
     
