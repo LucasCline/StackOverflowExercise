@@ -11,7 +11,7 @@ import UIKit
 class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     var networkingManager: NetworkingManager?
     var cache: NSCache<AnyObject, AnyObject>?
-    var questions: [StackOverflowQuestionModel]?
+    var questions: [StackOverflowQuestion]?
     weak var viewController: MainTableViewController?
     
     init(viewController: MainTableViewController, networkingManager: NetworkingManager, cache: NSCache<AnyObject,AnyObject>) {

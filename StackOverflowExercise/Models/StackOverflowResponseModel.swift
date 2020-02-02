@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct StackOverflowResponseModel: Codable {
-    var questions: [StackOverflowQuestionModel]
+struct StackOverflowResponse: Codable {
+    var questions: [StackOverflowQuestion]
     var hasMore: Bool
     var quotaMax: Int
     var quotaRemaining: Int
@@ -21,9 +21,9 @@ struct StackOverflowResponseModel: Codable {
     }
 }
 
-struct StackOverflowQuestionModel: Codable {
+struct StackOverflowQuestion: Codable {
     var tags: [String]
-    var owner: StackOverflowOwnerModel?
+    var owner: StackOverflowOwner?
     var isAnswered: Bool
     var viewCount: Int
     var answerCount: Int
@@ -48,7 +48,7 @@ struct StackOverflowQuestionModel: Codable {
     }
 }
 
-struct StackOverflowOwnerModel: Codable {
+struct StackOverflowOwner: Codable {
     var reputation: Int?
     var userId: Int?
     var userType: String
