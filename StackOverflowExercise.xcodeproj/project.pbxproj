@@ -22,6 +22,7 @@
 		37141E9C23E5DC1600CFD7F6 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */; };
 		378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */; };
 		378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */; };
+		378E987123E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 		378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailWebViewController.swift; sourceTree = "<group>"; };
+		378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				37141E9323E4FE4C00CFD7F6 /* URLResponse+StackOverflowExercise.swift */,
 				378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */,
+				378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				37141E9C23E5DC1600CFD7F6 /* QuestionTableViewCell.swift in Sources */,
 				37141E8F23E4886000CFD7F6 /* NetworkingManager.swift in Sources */,
 				37141E5F23E481B300CFD7F6 /* AppDelegate.swift in Sources */,
+				378E987123E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift in Sources */,
 				37141E9123E48F3900CFD7F6 /* StackOverflowResponseModel.swift in Sources */,
 				378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */,
 				37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */,

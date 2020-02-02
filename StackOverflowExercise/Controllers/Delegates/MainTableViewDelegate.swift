@@ -44,14 +44,16 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         cell.viewsCount.text = "\(questionForRow?.viewCount ?? 0) views"
         cell.score.text = "\(questionForRow?.score ?? 0)"
         cell.displayName.text = String(htmlEncodedString: questionForRow?.owner?.displayName ?? "N/A")
+        
         //set the array of tag buttons
         for (n, button) in cell.collectionOfTagButtons.enumerated() {
-            //this is to prevent an array out of index crash for now.
-            if questionForRow?.tags.count ?? 0 >= n+1 {
-                button.setTitle(questionForRow?.tags[n], for: .normal)
-            } else {
+            guard let tag = questionForRow?.tags[safeIndex: n] else {
+                print("No tag information found - will hide the tag button")
                 button.isHidden = true
+                continue
             }
+            
+            button.setTitle(tag, for: .normal)
         }
         
         cell.profileImage.image = nil
