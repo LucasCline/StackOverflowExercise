@@ -23,7 +23,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions?.count ?? 10 //arbitrary default of 10
+        return questions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -34,21 +34,24 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell else {
-            print("Failed to dequeue reusable cell with Identifier \(QuestionTableViewCell.identifier)")
+            print("Failed to cast UITableViewCell to cell with identifier - \(QuestionTableViewCell.identifier)")
             return UITableViewCell()
         }
         
-        let questionForRow = questions?[indexPath.row]
+        guard let questionForRow = questions?[indexPath.row] else {
+            print("Unable to find question data for row - \(indexPath.row)")
+            return cell
+        }
 
-        cell.title.text = String(htmlEncodedString: questionForRow?.title ?? "Question")
-        cell.answerCount.text = "\(questionForRow?.answerCount ?? 0)"
-        cell.viewsCount.text = "\(questionForRow?.viewCount ?? 0) views"
-        cell.score.text = "\(questionForRow?.score ?? 0)"
-        cell.displayName.text = String(htmlEncodedString: questionForRow?.owner?.displayName ?? "N/A")
+        cell.title.text = String(htmlEncodedString: questionForRow.title)
+        cell.answerCount.text = "\(questionForRow.answerCount)"
+        cell.viewsCount.text = "\(questionForRow.viewCount) views"
+        cell.score.text = "\(questionForRow.score)"
+        cell.displayName.text = String(htmlEncodedString: questionForRow.owner?.displayName ?? "N/A")
         
         //set the labels on the array of tag buttons
         for (n, button) in cell.collectionOfTagButtons.enumerated() {
-            guard let tag = questionForRow?.tags[safeIndex: n] else {
+            guard let tag = questionForRow.tags[safeIndex: n] else {
                 print("No tag information found - will hide the tag button")
                 button.isHidden = true
                 continue
@@ -61,7 +64,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         if let cachedImage = cache?.object(forKey: indexPath.row as AnyObject) as? UIImage {
             cell.profileImage.image = cachedImage
         } else {
-            cell.profileImage.loadFromURL(photoURL: questionForRow?.owner?.profileImage)
+            cell.profileImage.loadFromURL(photoURL: questionForRow.owner?.profileImage)
         }
 
         return cell
