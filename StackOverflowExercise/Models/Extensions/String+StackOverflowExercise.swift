@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    //this method decodes an HTML string into a human readable string
     init?(htmlEncodedString: String) {
         guard let data = htmlEncodedString.data(using: .utf8) else {
             return nil
