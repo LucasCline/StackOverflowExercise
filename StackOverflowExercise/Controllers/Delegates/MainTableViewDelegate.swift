@@ -75,7 +75,9 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     private func fetchQuestions() {
-        networkingManager?.fetchQuestions { (response) in
+        networkingManager?.fetchQuestions(queryParameters: [QueryParameter(key: "order", value: "desc"),
+                                                            QueryParameter(key: "sort", value: "activity"),
+                                                            QueryParameter(key: "site", value: "stackoverflow")]) { (response) in
             self.questions = response.questions.filter { $0.isAnswered && $0.answerCount > 1 }
             DispatchQueue.main.async {
                 self.viewController?.questionsTableView.reloadData()

@@ -8,11 +8,22 @@
 
 import Foundation
 
-class NetworkingManager {
-    func fetchQuestions(queryParameters: String? = nil, completionHandler: @escaping (StackOverflowResponse) -> ()) {
+struct QueryParameter {
+    var key: String
+    var value: String
+}
+
+struct NetworkingManager {
+    func fetchQuestions(queryParameters: [QueryParameter]? = nil, completionHandler: @escaping (StackOverflowResponse) -> ()) {
         //if no query params are provided, we default with the questions from stackoverflow in ascending order based on activity (most recent questions first)
-        let queryParams = queryParameters ?? "order=desc&sort=activity&site=stackoverflow"
-        guard let url = URL(string: "https://api.stackexchange.com/questions?\(queryParams)") else {
+        var queryParams: String
+        if let queryParameters = queryParameters {
+            queryParams = build(queryParameters: queryParameters)
+        } else {
+            queryParams = "?order=desc&sort=activity&site=stackoverflow"
+        }
+        
+        guard let url = URL(string: "https://api.stackexchange.com/questions\(queryParams)") else {
             print("Unable to create URL in fetchQuestions method with query parameters - \(queryParams)")
             return
         }
@@ -41,5 +52,16 @@ class NetworkingManager {
         }
 
         task.resume()
+    }
+    
+    private func build(queryParameters: [QueryParameter]) -> String {
+        var queryString: String  = "?"
+        for queryParameter in queryParameters {
+            queryString += "\(queryParameter.key)=\(queryParameter.value)&"
+        }
+        
+        queryString.removeLast(1)
+        
+        return queryString
     }
 }
