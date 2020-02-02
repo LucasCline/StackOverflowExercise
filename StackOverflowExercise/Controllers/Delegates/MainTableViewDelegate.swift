@@ -26,6 +26,10 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         return questions?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewController?.linkForSegue = questions?[indexPath.row].link
         viewController?.performSegue(withIdentifier: "QuestionDetail", sender: viewController)
