@@ -11,6 +11,7 @@ import UIKit
 class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     var networkingManager: NetworkingManager?
     var cache: NSCache<AnyObject, AnyObject>?
+    var questions: [StackOverflowQuestionModel]?
     weak var viewController: MainTableViewController?
     
     init(viewController: MainTableViewController, networkingManager: NetworkingManager, cache: NSCache<AnyObject,AnyObject>) {
@@ -22,11 +23,11 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return networkingManager?.getFilteredQuestions().count ?? 10 //arbitrary default of 10
+        return questions?.count ?? 10 //arbitrary default of 10
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewController?.linkForSegue = networkingManager?.getFilteredQuestions()[indexPath.row].link
+        viewController?.linkForSegue = questions?[indexPath.row].link
         viewController?.performSegue(withIdentifier: "QuestionDetail", sender: viewController)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -37,7 +38,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
             return UITableViewCell()
         }
         
-        let questionForRow = networkingManager?.getFilteredQuestions()[indexPath.row]
+        let questionForRow = questions?[indexPath.row]
 
         cell.title.text = String(htmlEncodedString: questionForRow?.title ?? "Question")
         cell.answerCount.text = "\(questionForRow?.answerCount ?? 0)"
@@ -88,7 +89,8 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     private func fetchQuestions() {
-        networkingManager?.fetchQuestions {
+        networkingManager?.fetchQuestions { (response) in
+            self.questions = response.questions.filter { $0.isAnswered && $0.answerCount > 1 }
             DispatchQueue.main.async {
                 self.viewController?.questionsTableView.reloadData()
             }
