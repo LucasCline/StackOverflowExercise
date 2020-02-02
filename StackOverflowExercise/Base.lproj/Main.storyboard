@@ -26,10 +26,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-aB-Zqk" userLabel="Views and Answers View">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-aB-Zqk" userLabel="Views and Answers View">
                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="150"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-rf-uxt" userLabel="Answers View">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-rf-uxt" userLabel="Answers View">
                                                             <rect key="frame" x="0.0" y="0.0" width="83" height="113.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-aa-LN1" userLabel="Answers Count">
@@ -87,7 +87,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="Jm3-hj-Yby" secondAttribute="trailing" id="bP9-9L-6uI"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ndw-hI-mVq" userLabel="Title View">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ndw-hI-mVq" userLabel="Title View">
                                                     <rect key="frame" x="83" y="0.0" width="331" height="75"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiR-L8-KZN">
@@ -105,22 +105,22 @@
                                                         <constraint firstItem="DiR-L8-KZN" firstAttribute="top" secondItem="Ndw-hI-mVq" secondAttribute="top" constant="10" id="xRX-sF-5vR"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-BI-1I3" userLabel="Tags View">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-BI-1I3" userLabel="Tags View">
                                                     <rect key="frame" x="83" y="75" width="256" height="37.5"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv6-bz-TmX" userLabel="tag1">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv6-bz-TmX" userLabel="tag1">
                                                             <rect key="frame" x="5" y="5" width="27" height="27.5"/>
                                                             <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                                             <state key="normal" title="tag"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-bc-xlP" userLabel="tag2">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-bc-xlP" userLabel="tag2">
                                                             <rect key="frame" x="40" y="5" width="27" height="27.5"/>
                                                             <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                                             <state key="normal" title="tag"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-9P-BMp" userLabel="tag3">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-9P-BMp" userLabel="tag3">
                                                             <rect key="frame" x="75" y="5" width="27" height="27.5"/>
                                                             <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
@@ -141,7 +141,7 @@
                                                         <constraint firstItem="Gv6-bz-TmX" firstAttribute="leading" secondItem="tOt-BI-1I3" secondAttribute="leading" constant="5" id="wMT-pX-aw3"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTs-kt-PH2" userLabel="Profile Image View">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTs-kt-PH2" userLabel="Profile Image View">
                                                     <rect key="frame" x="339" y="75" width="75" height="75"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-V6-DIV">
@@ -157,7 +157,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="L0f-V6-DIV" secondAttribute="bottom" id="zc3-oW-s9v"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ol-yc-c91" userLabel="Tags View">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ol-yc-c91" userLabel="Username and Score View">
                                                     <rect key="frame" x="83" y="112.5" width="256" height="37.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-Fv-qZP">
@@ -228,14 +228,52 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="StackOverflow Questions" id="Rt2-Ir-AFx"/>
+                    <navigationItem key="navigationItem" title="StackOverflow Questions" id="Rt2-Ir-AFx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="OpH-ih-XM7"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="questionsTableView" destination="fYj-fA-ITf" id="LjV-rw-QkT"/>
+                        <segue destination="kZe-6J-de6" kind="show" identifier="QuestionDetail" id="XPs-r8-Vo3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="120.53571428571428"/>
+            <point key="canvasLocation" x="967" y="121"/>
+        </scene>
+        <!--Question Detail Web View Controller-->
+        <scene sceneID="DBL-I9-j3C">
+            <objects>
+                <viewController id="kZe-6J-de6" customClass="QuestionDetailWebViewController" customModule="StackOverflowExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyZ-2b-GXE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQw-rm-EOW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kQw-rm-EOW" firstAttribute="leading" secondItem="R5r-fJ-BxB" secondAttribute="leading" id="Ldw-Al-TJi"/>
+                            <constraint firstItem="R5r-fJ-BxB" firstAttribute="bottom" secondItem="kQw-rm-EOW" secondAttribute="bottom" id="NS5-aF-8gu"/>
+                            <constraint firstItem="R5r-fJ-BxB" firstAttribute="trailing" secondItem="kQw-rm-EOW" secondAttribute="trailing" id="Tog-Yt-VbT"/>
+                            <constraint firstItem="kQw-rm-EOW" firstAttribute="top" secondItem="R5r-fJ-BxB" secondAttribute="top" id="wWy-fF-hIv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R5r-fJ-BxB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mwG-6f-nbA"/>
+                    <connections>
+                        <outlet property="webView" destination="kQw-rm-EOW" id="22m-JN-AA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3to-EN-LGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1E-Cf-dGs">

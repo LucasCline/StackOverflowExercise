@@ -25,6 +25,12 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         return networkingManager?.getFilteredQuestions().count ?? 10 //arbitrary default of 10
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewController?.linkForSegue = networkingManager?.getFilteredQuestions()[indexPath.row].link
+        viewController?.performSegue(withIdentifier: "QuestionDetail", sender: viewController)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell else {
             print("Failed to dequeue reusable cell with Identifier \(QuestionTableViewCell.identifier)")
@@ -49,7 +55,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         }
         
         cell.profileImage.image = nil
-        
+
         if let cachedImage = cache?.object(forKey: indexPath.row as AnyObject) as? UIImage {
             cell.profileImage.image = cachedImage
         } else {

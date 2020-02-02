@@ -21,6 +21,7 @@
 		37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */; };
 		37141E9C23E5DC1600CFD7F6 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */; };
 		378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */; };
+		378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDelegate.swift; sourceTree = "<group>"; };
 		37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StackOverflowExercise.swift"; sourceTree = "<group>"; };
+		378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,6 @@
 		37141E9223E4FE0000CFD7F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */,
 				37141E9A23E50D7000CFD7F6 /* Extensions */,
 			);
 			path = Models;
@@ -156,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				37141E9623E50A6300CFD7F6 /* MainTableViewController.swift */,
-				37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */,
+				378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */,
+				378E986F23E6746F00FD7BD2 /* Delegates */,
+				378E986E23E6745900FD7BD2 /* TableViewCells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +171,22 @@
 				378E986A23E61EED00FD7BD2 /* String+StackOverflowExercise.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		378E986E23E6745900FD7BD2 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				37141E9B23E5DC1600CFD7F6 /* QuestionTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		378E986F23E6746F00FD7BD2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +328,7 @@
 				378E986B23E61EED00FD7BD2 /* String+StackOverflowExercise.swift in Sources */,
 				37141E9723E50A6300CFD7F6 /* MainTableViewController.swift in Sources */,
 				37141E9923E50D5600CFD7F6 /* MainTableViewDelegate.swift in Sources */,
+				378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */,
 				37141E6123E481B300CFD7F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
