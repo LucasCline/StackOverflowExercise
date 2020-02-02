@@ -115,6 +115,7 @@
 		37141E5D23E481B300CFD7F6 /* StackOverflowExercise */ = {
 			isa = PBXGroup;
 			children = (
+				378E987223E68BF800FD7BD2 /* Networking */,
 				37141E9523E509ED00CFD7F6 /* Controllers */,
 				37141E9223E4FE0000CFD7F6 /* Models */,
 				37141E5E23E481B300CFD7F6 /* AppDelegate.swift */,
@@ -123,8 +124,6 @@
 				37141E6723E481CB00CFD7F6 /* Assets.xcassets */,
 				37141E6923E481CB00CFD7F6 /* LaunchScreen.storyboard */,
 				37141E6C23E481CB00CFD7F6 /* Info.plist */,
-				37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */,
-				37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */,
 			);
 			path = StackOverflowExercise;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 		37141E9223E4FE0000CFD7F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37141E9023E48F3900CFD7F6 /* StackOverflowResponseModel.swift */,
 				37141E9A23E50D7000CFD7F6 /* Extensions */,
 			);
 			path = Models;
@@ -190,6 +190,14 @@
 				37141E9823E50D5600CFD7F6 /* MainTableViewDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		378E987223E68BF800FD7BD2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				37141E8E23E4886000CFD7F6 /* NetworkingManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

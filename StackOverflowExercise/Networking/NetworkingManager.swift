@@ -42,8 +42,4 @@ class NetworkingManager {
 
         task.resume()
     }
-    
-//    func getFilteredQuestions() -> [StackOverflowQuestionModel] {
-//        return self.questions.filter { $0.isAnswered }.filter { $0.answerCount > 1 }
-//    }
 }

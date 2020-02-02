@@ -46,7 +46,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         cell.score.text = "\(questionForRow?.score ?? 0)"
         cell.displayName.text = String(htmlEncodedString: questionForRow?.owner?.displayName ?? "N/A")
         
-        //set the array of tag buttons
+        //set the labels on the array of tag buttons
         for (n, button) in cell.collectionOfTagButtons.enumerated() {
             guard let tag = questionForRow?.tags[safeIndex: n] else {
                 print("No tag information found - will hide the tag button")
