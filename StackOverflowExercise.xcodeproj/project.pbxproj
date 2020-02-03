@@ -24,6 +24,7 @@
 		378E986D23E6745200FD7BD2 /* QuestionDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */; };
 		378E987123E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */; };
 		378E987423E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987323E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift */; };
+		378E987823E7D82700FD7BD2 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E987723E7D82700FD7BD2 /* NetworkingManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		378E986C23E6745200FD7BD2 /* QuestionDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailWebViewController.swift; sourceTree = "<group>"; };
 		378E987023E67B9A00FD7BD2 /* Array+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+StackOverflowExercise.swift"; sourceTree = "<group>"; };
 		378E987323E72CC200FD7BD2 /* UIImageView+StackOverflowExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+StackOverflowExercise.swift"; sourceTree = "<group>"; };
+		378E987723E7D82700FD7BD2 /* NetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				37141E7523E481CB00CFD7F6 /* StackOverflowExerciseTests.swift */,
 				37141E7723E481CB00CFD7F6 /* Info.plist */,
+				378E987723E7D82700FD7BD2 /* NetworkingManagerTests.swift */,
 			);
 			path = StackOverflowExerciseTests;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37141E7623E481CB00CFD7F6 /* StackOverflowExerciseTests.swift in Sources */,
+				378E987823E7D82700FD7BD2 /* NetworkingManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

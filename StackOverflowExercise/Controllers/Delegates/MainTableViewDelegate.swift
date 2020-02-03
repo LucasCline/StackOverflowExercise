@@ -26,6 +26,10 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         return questions?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
+    }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
@@ -72,10 +76,6 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         }
 
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
     }
     
     func fetchQuestions() {

@@ -54,7 +54,7 @@ struct NetworkingManager {
         task.resume()
     }
     
-    private func build(queryParameters: [QueryParameter]) -> String {
+    func build(queryParameters: [QueryParameter]) -> String {
         var queryString: String  = "?"
         for queryParameter in queryParameters {
             queryString += "\(queryParameter.key)=\(queryParameter.value)&"
