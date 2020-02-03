@@ -25,12 +25,12 @@ class QuestionTableViewCell: UITableViewCell {
     
     @IBAction func tagTapped(_ sender: Any) {
         guard let sender = sender as? UIButton else {
-            print("make the sender a button or whatever")
+            print("tagTapped - failed to cast the sender as a UIButton")
             return
         }
         
         guard let tag = sender.titleLabel?.text else {
-            print("tag was empty")
+            print("tagTapped - there was no tag information found")
             return
         }
         
