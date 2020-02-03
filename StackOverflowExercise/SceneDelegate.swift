@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 firstViewController.delegate = MainTableViewDelegate(viewController: firstViewController,
                                                                      networkingManager: NetworkingManager(),
                                                                      cache: NSCache())
+                firstViewController.refreshControl = UIRefreshControl()
         }
     }
 

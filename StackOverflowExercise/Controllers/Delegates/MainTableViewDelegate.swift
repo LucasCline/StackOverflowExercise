@@ -11,8 +11,8 @@ import UIKit
 class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     var networkingManager: NetworkingManager?
     var cache: NSCache<AnyObject, AnyObject>?
-    var questions: [StackOverflowQuestion]?
     weak var viewController: MainTableViewController?
+    private var questions: [StackOverflowQuestion]?
     
     init(viewController: MainTableViewController, networkingManager: NetworkingManager, cache: NSCache<AnyObject,AnyObject>) {
         super.init()
@@ -78,13 +78,14 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         return 175
     }
     
-    private func fetchQuestions() {
+    func fetchQuestions() {
         networkingManager?.fetchQuestions(queryParameters: [QueryParameter(key: "order", value: "desc"),
                                                             QueryParameter(key: "sort", value: "activity"),
                                                             QueryParameter(key: "site", value: "stackoverflow")]) { (response) in
             self.questions = response.questions.filter { $0.isAnswered && $0.answerCount > 1 }
             DispatchQueue.main.async {
                 self.viewController?.questionsTableView.reloadData()
+                self.viewController?.refreshControl?.endRefreshing()
             }
         }
     }

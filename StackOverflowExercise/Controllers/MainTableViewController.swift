@@ -10,6 +10,7 @@ import UIKit
 
 class MainTableViewController: UIViewController {
     var delegate: MainTableViewDelegate?
+    var refreshControl: UIRefreshControl?
     var linkForSegue: String?
     @IBOutlet weak var questionsTableView: UITableView!
     override func viewDidLoad() {
@@ -17,6 +18,8 @@ class MainTableViewController: UIViewController {
         
         questionsTableView.delegate = delegate
         questionsTableView.dataSource = delegate
+
+        setupRefreshControl()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,5 +35,19 @@ class MainTableViewController: UIViewController {
         }
         
         destinationVC.request = URLRequest(url: url)
+    }
+    
+    @objc private func refreshQuestionData() {
+        delegate?.fetchQuestions()
+    }
+    
+    private func setupRefreshControl() {
+        guard let refreshControl = self.refreshControl else {
+            print("No refresh control found on MainTableViewController")
+            return
+        }
+        
+        questionsTableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshQuestionData), for: .valueChanged)
     }
 }
