@@ -30,16 +30,17 @@ struct NetworkingManager {
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let response = response else {
-                print("No response from server for fetchQuestions method")
+                print("fetchQuestions method received no response from the server")
                 return
             }
             
             guard response.isSuccessful else {
-                print("Fetch Questions request was unsuccessful with response - \(response)")
+                print("fetchQuestions method was unsuccessful with response - \(response)")
                 return
             }
 
             guard let data = data else {
+                print("fetchQuestions method received no data from the server")
                 return
             }
 
