@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol StackOverflowQuestionTagDelegate {
+    func tapped(tag: String)
+}
+
 class QuestionTableViewCell: UITableViewCell {
     static let identifier = "QuestionCell"
+    var delegate: StackOverflowQuestionTagDelegate?
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var answerCount: UILabel!
     @IBOutlet weak var viewsCount: UILabel!
@@ -17,4 +22,18 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var score: UILabel!
+    
+    @IBAction func tagTapped(_ sender: Any) {
+        guard let sender = sender as? UIButton else {
+            print("make the sender a button or whatever")
+            return
+        }
+        
+        guard let tag = sender.titleLabel?.text else {
+            print("tag was empty")
+            return
+        }
+        
+        delegate?.tapped(tag: tag)
+    }
 }

@@ -51,6 +51,8 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
             return cell
         }
 
+        cell.delegate = self
+        
         cell.title.text = String(htmlEncodedString: questionForRow.title)
         cell.answerCount.text = "\(questionForRow.answerCount)"
         cell.viewsCount.text = "\(questionForRow.viewCount) views"
@@ -68,7 +70,7 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
             button.setTitle(tag, for: .normal)
         }
         
-        cell.profileImage.image = nil
+        cell.profileImage.image = UIImage(named: "placeholderImage")
         if let cachedImage = cache?.object(forKey: indexPath.row as AnyObject) as? UIImage {
             cell.profileImage.image = cachedImage
         } else {
@@ -79,14 +81,27 @@ class MainTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     }
     
     func fetchQuestions() {
-        networkingManager?.fetchQuestions(queryParameters: [QueryParameter(key: "order", value: "desc"),
-                                                            QueryParameter(key: "sort", value: "activity"),
-                                                            QueryParameter(key: "site", value: "stackoverflow")]) { (response) in
+        let queryParameters = [QueryParameter(key: "order", value: "desc"),
+                              QueryParameter(key: "sort", value: "activity"),
+                              QueryParameter(key: "site", value: "stackoverflow")]
+        
+        networkingManager?.fetchQuestions(queryParameters: queryParameters) { (response) in
             self.questions = response.questions.filter { $0.isAnswered && $0.answerCount > 1 }
             DispatchQueue.main.async {
                 self.viewController?.questionsTableView.reloadData()
                 self.viewController?.refreshControl?.endRefreshing()
             }
         }
+    }
+}
+
+extension MainTableViewDelegate: StackOverflowQuestionTagDelegate {
+    func tapped(tag: String) {
+        viewController?.linkForSegue = buildURLWith(tag: tag)
+        viewController?.performSegue(withIdentifier: "QuestionDetail", sender: self)
+    }
+    
+    private func buildURLWith(tag: String) -> String {
+        return "https://stackoverflow.com/questions/tagged/\(tag)"
     }
 }

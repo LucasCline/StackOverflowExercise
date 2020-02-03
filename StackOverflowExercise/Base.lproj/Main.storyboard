@@ -106,43 +106,59 @@
                                                         <constraint firstItem="DiR-L8-KZN" firstAttribute="top" secondItem="Ndw-hI-mVq" secondAttribute="top" constant="10" id="xRX-sF-5vR"/>
                                                     </constraints>
                                                 </view>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-BI-1I3" userLabel="Tags View">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-BI-1I3" userLabel="Tags View">
                                                     <rect key="frame" x="83" y="75" width="256" height="37.5"/>
                                                     <subviews>
-                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv6-bz-TmX" userLabel="tag1">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv6-bz-TmX" userLabel="tag1">
                                                             <rect key="frame" x="5" y="5" width="30" height="18"/>
                                                             <color key="backgroundColor" white="0.86481257335680739" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="ZEQ-Ky-AcQ"/>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="hkz-en-vBD"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
                                                             <state key="normal" title="tag"/>
+                                                            <connections>
+                                                                <action selector="tagTapped:" destination="bOb-eS-Ee7" eventType="touchUpInside" id="1jp-eH-9HN"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-bc-xlP" userLabel="tag2">
-                                                            <rect key="frame" x="43" y="5" width="30" height="18"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-bc-xlP" userLabel="tag2">
+                                                            <rect key="frame" x="47" y="5" width="30" height="18"/>
                                                             <color key="backgroundColor" white="0.86481257339999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="xXv-AW-12i"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
                                                             <state key="normal" title="tag"/>
+                                                            <connections>
+                                                                <action selector="tagTapped:" destination="bOb-eS-Ee7" eventType="touchUpInside" id="p3Z-uo-4Qk"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-9P-BMp" userLabel="tag3">
-                                                            <rect key="frame" x="81" y="5" width="30" height="18"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-9P-BMp" userLabel="tag3">
+                                                            <rect key="frame" x="89" y="5" width="30" height="18"/>
                                                             <color key="backgroundColor" white="0.86481257339999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="zyD-99-ndG"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
                                                             <state key="normal" title="tag"/>
+                                                            <connections>
+                                                                <action selector="tagTapped:" destination="bOb-eS-Ee7" eventType="touchUpInside" id="801-uJ-0Ge"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="HlD-9P-BMp" firstAttribute="leading" secondItem="0t5-bc-xlP" secondAttribute="trailing" constant="8" id="1Ok-vg-NmO"/>
+                                                        <constraint firstItem="HlD-9P-BMp" firstAttribute="leading" secondItem="0t5-bc-xlP" secondAttribute="trailing" constant="12" id="1Ok-vg-NmO"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HlD-9P-BMp" secondAttribute="trailing" constant="5" id="7DG-2h-x74"/>
                                                         <constraint firstItem="HlD-9P-BMp" firstAttribute="top" secondItem="0t5-bc-xlP" secondAttribute="top" id="9kc-QY-szC"/>
                                                         <constraint firstItem="0t5-bc-xlP" firstAttribute="top" secondItem="Gv6-bz-TmX" secondAttribute="top" id="ZDl-EB-i0Y"/>
                                                         <constraint firstItem="0t5-bc-xlP" firstAttribute="bottom" secondItem="Gv6-bz-TmX" secondAttribute="bottom" id="ksY-P3-YbS"/>
                                                         <constraint firstItem="Gv6-bz-TmX" firstAttribute="top" secondItem="tOt-BI-1I3" secondAttribute="top" constant="5" id="lDo-YM-BDJ"/>
-                                                        <constraint firstItem="0t5-bc-xlP" firstAttribute="leading" secondItem="Gv6-bz-TmX" secondAttribute="trailing" constant="8" id="pCJ-Vc-tPq"/>
+                                                        <constraint firstItem="0t5-bc-xlP" firstAttribute="leading" secondItem="Gv6-bz-TmX" secondAttribute="trailing" constant="12" id="pCJ-Vc-tPq"/>
                                                         <constraint firstItem="HlD-9P-BMp" firstAttribute="bottom" secondItem="0t5-bc-xlP" secondAttribute="bottom" id="seo-WF-8AQ"/>
                                                         <constraint firstItem="Gv6-bz-TmX" firstAttribute="leading" secondItem="tOt-BI-1I3" secondAttribute="leading" constant="5" id="wMT-pX-aw3"/>
                                                     </constraints>

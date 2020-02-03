@@ -12,7 +12,7 @@ extension UIImageView {
     func loadFromURL(photoURL: String?) {
         guard let urlString = photoURL,
             let url = URL(string: urlString) else {
-                print("Could not create url with string \(String(describing: photoURL))")
+                print("UIImageView loadFromURL - Could not create url with string \(String(describing: photoURL))")
             return
         }
         
